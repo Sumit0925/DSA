@@ -32,6 +32,6 @@ int main()
     }
     else
     {
-        cout << "key is not present" << endl;
+        cout <<key<< " is not present" << endl;
     }
 }
