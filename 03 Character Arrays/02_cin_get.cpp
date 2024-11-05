@@ -15,7 +15,7 @@ int main() {
     temp = cin.get();
   }
   sentence[len] = '\0';  // termination the last element with null character
-                         // otherwise it will give us Garbage Value
+                         // otherwise it will give us Garbage Value as we are using cin.get()
 
   cout << "Length " << len << endl;
 
