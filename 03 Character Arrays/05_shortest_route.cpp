@@ -1,6 +1,11 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+
+//! Problem Statement
+//* Find Displacement: Given a long route contianing N,S,E,W directions,
+//* find the shortest path to react the location
+
 int main() {
   char direction[1000];
 
@@ -30,6 +35,44 @@ int main() {
   }
 
   cout<< "x : " << x << endl << "y : "<<y<<endl;
+
+  //* for 1st quadrant
+  if(x>=0 && y>=0){
+    while(y--){
+      cout<<"N";
+    }
+    while(x--){
+      cout<<"E";
+    }
+  }
+  //* for 2nd quadrant
+  if(x<=0 && y>=0){
+    while(y--){
+      cout<<"N";
+    }
+    while(x++){
+      cout<<"W";
+    }
+  }
+  //* for 3rd quadrant
+  if(x<=0 && y<=0){
+    while(y++){
+      cout<<"S";
+    }
+    while(x++){
+      cout<<"W";
+    }
+  }
+  //* for 4th quadrant
+  if(x>=0 && y<=0){
+    while(y++){
+      cout<<"S";
+    }
+    while(x--){
+      cout<<"E";
+    }
+  }
+
 
   return 0;
 }
