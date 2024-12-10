@@ -1,9 +1,21 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+/*  Given a matrix of size M x N, there are large number of queries to find
+    submatrix sums. Inputs two queries are left top and right bottom indexes of
+    ubmatrix whose sum is to find out.
+
+    How to preprocess the matrix so that submatrix sum queries can be performed in
+    O(1) time.
+
+//* INPUT FORMAT:
+    Given a matrix (2d vector) and query.. Each query has Starting row, Starting
+    column, Ending row, Ending column. 
+*/
+
 int submatrix_sum(vector<vector<int>> v, int sr, int sc, int er, int ec) {
-  int r = v.size();  //* no. of rows
-  int c = v[0].size(); //* no. of columns
+  int r = v.size();     //* no. of rows
+  int c = v[0].size();  //* no. of columns
 
   int tli = sr, tlj = sc, rbi = er, rbj = ec;
 
@@ -52,7 +64,8 @@ int main() {
   int ec = 4;  //* Ending column
 
   int ans = submatrix_sum(v, sr, sc, er, ec);
-  
-  cout<<"Sum Between "<<sr<<","<<sc<<" and "<<er<<","<<ec<<" is : "<<ans;
+
+  cout << "Sum Between " << sr << "," << sc << " and " << er << "," << ec
+       << " is : " << ans;
   return 0;
 }
